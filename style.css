@@ -1,0 +1,183 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: 'Encode Sans SC',sans-serif;
+    color: white;
+
+}
+.container{
+   margin-left: 200px;
+   margin-top: 50px;
+}
+.blur{
+    filter: blur(20px);
+}
+.heading{
+    display: inline-block;
+    color: white;
+
+}
+.heading1{
+    font-family: 'Encode Sans SC',sans-serif;
+    font-weight: 600;
+    font-size: 50px;
+    
+}
+.heading2{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 50px;
+    color: white;
+}
+.add-list-icon{
+    display: inline-block;
+    color:#4b8ce8;
+    font-weight: lighter;
+    margin-left:500px;
+}
+.add-list-text{
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+.no-item{
+    color: white;
+    margin-left: 200px;
+    font-weight: lighter;
+    font-size: 42px;
+    margin-top: 25px;
+}
+.add-new-list-container{
+    width: 450px;
+    height: 225px;
+    border: 1px solid #e74c3c;
+    border-radius: 10px;
+   filter: blur(0px);
+    background-color: white;
+    position: absolute;
+    left: 441px;
+    bottom: 145px;
+}
+.add-new-list-container-animate{
+    animation-name: popupanimate;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  
+}
+@keyframes popupanimate{
+    10%{
+       transform: translateY(-30px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+    
+}
+.heading-new-container{
+    color: #e74c3c;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 22px;
+    font-size: 400;
+}
+.input-box{
+    outline: none;
+    border: 1px solid #e74c3c;
+    width: 264px;
+    height: 32px;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 8px 8px 8px lightgrey;
+    margin-left: 82px;
+}
+.Add-btn{
+    display: inline-block;
+    width: 99px;
+    height: 40px;
+    background-color: #e74c3c;
+    border: none;
+    color: white;
+    border-radius: 18px;
+    margin-left: 104px;
+    font-size: 20px;
+    margin-top: 29px;
+    outline: none;
+}
+.popup{
+    display: none;
+}
+.close-btn{
+    display: inline-block;
+    width: 99px;
+    height: 40px;
+    background-color: #e74c3c;
+    border: none;
+    color: white;
+    border-radius: 18px;
+    margin-left: 30px;
+    font-size: 20px;
+    margin-top: 29px;
+    outline: none;
+}
+.todo-list-container{
+    width: 250px;
+    height: 375px;
+    border: 1px solid #e74c3c ;
+    border-radius: 10px;
+    background-color: white;
+    margin: 15px 30px;
+}
+.item-container{
+    margin: 20px 150px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.inner-text-1{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    color: #ec3f2c;
+    margin-bottom: 10px;
+   
+}
+.horizontal-line{
+    background-color: black;
+    height: 2px;
+}
+#del-icon{
+    display: inline-block;
+    width: 99px;
+    height: 40px;
+    background-color: #e74c3c;
+    border: none;
+    color: white;
+    border-radius: 18px;
+    margin-left: 104px;
+    font-size: 43px;
+    margin-top: 29px;
+    outline: none;
+}
+.delicon{
+    font-size: 32px;
+    color: #e74c3c;
+    position: relative;
+    top: 251px;
+    left: 170px;
+    width: 36px;
+    height: 36px;;
+    
+}
+.addlist{
+    left: 152px;
+    width: 32px;
+    font-size: 32px;
+    color: blue;
+    position: relative;
+    top: 256px;
+}
