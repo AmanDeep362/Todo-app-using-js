@@ -14,27 +14,28 @@
 
 </head>
 <body>
+    
     <div id="main-container" class="">
     <div class="container">
         <h1 class="heading1 heading">Tasks</h1>
         <h1 class="heading2 heading">Lists</h1>
                 <div class="add-list-icon"><i class="fa fa-plus-circle" onclick="popup()" style="font-size:36px"></i></div>
-                <p class="add-list-text">Add list</p>
+                <p class="add-list-text" onclick="popup()">Add Item</p>
     </div>
     <div class="no-item" id="div-container" >
         No items in todo list
     </div>
     <div class="item-container"id="div-add"></div>
+    
     </div>
     <div class="popup" id="popup-container">
-        <div class="add-new-list-container add-new-list-container-animate">
+            <div class="add-new-list-container add-new-list-container-animate">
             <p class="heading-new-container">Add New List</p>
             <input type="text" value="" id="inputbox" placeholder="Add new list" class="input-box">
-            <button class="Add-btn" onclick="addvalue()">Add</button>
+            <button class="Add-btn" onclick="addvalue()" id="addbtn">Add</button>
             <button class="close-btn" id="close-list-btn" onclick="closelist()">Close</button>
     </div>
    
-    </div>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="index.js"></script>
