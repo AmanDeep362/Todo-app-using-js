@@ -27,10 +27,11 @@ var addvalue = ()=>{
      <div class="inner-container">
      <hr class="horizontal-line">
      <div>
-     <span> <i class="fa fa-plus-circle addlist" id="add-item-icon style="font-size:36px"></i></span>
+     <span> <i class="fa fa-plus-circle addlist" onclick="addsubtodo(this)" id="add-item-icon style="font-size:36px"></i></span>
      <span><i class="fas fa-trash-alt delicon" onclick="deleteitem(this)" id="del-icon" style=font-size:"36px"></i></span>
-    
+     
      </div>
+     <div id="subtodo-list-container"></div>
      </div> `;
      
      var adddiv = document.querySelector("#div-add")
@@ -91,9 +92,46 @@ var currentdiv = currentelement.parentNode.parentElement.parentElement.parentEle
     checknoitemdiv();
   
 }
-  // for(let i =0;i<listarr.length;i++){
-  //   if(uid = listarr[i].id){
-  //     var node = document.getElementById(uid);
-  //     document.removeChild(node)
-  //   }
-  // }
+var currentTodoId;
+  function addsubtodo(current) {
+    
+   var currentelemntid = current.parentElement.parentElement.parentElement.parentElement;
+   var currentId = currentelemntid.getAttribute("id")
+   document.getElementById("pop-container").style.display = "block";
+   container.classList.add("blur");
+   var addsublist = document.getElementById("subtodoaddbtn");
+   currentTodoId = currentId;
+    }
+   function addsubtodolist(){
+    
+        var sublistvalue = document.getElementById("subtodovalue").value;
+        
+        var innerdiv = document.getElementById(currentTodoId).childNodes[3].childNodes[5];
+      if(sublistvalue != ""){
+        var newnode = document.createElement('div');
+        newnode.innerHTML = `<p class="subtodo-heading" >${sublistvalue}</p>
+        <button class="markdown-button" onclick="marklist(this)" id="${Date.now()}">Mark Done</button>
+        `
+        innerdiv.appendChild(newnode);
+        var pop = document.getElementById("pop-container");
+      }
+      else{
+        addsubtodolist();
+      }
+        pop.style.display = "none";
+        container.classList.remove("blur");
+    
+    }
+function closesubtodo(){
+  var pop = document.getElementById("pop-container");
+  pop.style.display = "none";
+  container.classList.remove("blur");
+ 
+}
+function marklist(markedId) {
+  var markid = markedId.getAttribute("id")
+  var prevelement = document.getElementById(markid).previousElementSibling;
+  prevelement.classList.add("markheading")
+  document.getElementById(markid).style.display = "none";
+  
+}
