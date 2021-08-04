@@ -1,7 +1,7 @@
 
  var listarr =[];
  var count = 0;
-
+ var bool = false;
  var poplist = document.getElementById("popup-container");
   var container = document.getElementById("main-container");
   
@@ -22,8 +22,8 @@ var addvalue = ()=>{
    count++;
    if(inputBox != ""){
      const create_new_element = document.createElement("div");
-     create_new_element.innerHTML =` <div class="todo-list-container" id="${Date.now()}">
-     <p class="inner-text-1" id="Innertext">${inputBox}</p>
+     create_new_element.innerHTML =` <div class="todo-list-container todomobile" id="${Date.now()}">
+     <p class="inner-text-1" onclick="opentodo(this)" id="Innertext">${inputBox}</p>
      <div class="inner-container">
      <hr class="horizontal-line">
      <div>
@@ -90,7 +90,8 @@ var currentdiv = currentelement.parentNode.parentElement.parentElement.parentEle
  count--;
 
     checknoitemdiv();
-  
+    
+
 }
 var currentTodoId;
   function addsubtodo(current) {
@@ -99,6 +100,7 @@ var currentTodoId;
    var currentId = currentelemntid.getAttribute("id")
    document.getElementById("pop-container").style.display = "block";
    container.classList.add("blur");
+   document.getElementById("maincontainer2").classList.add("blur")
    var addsublist = document.getElementById("subtodoaddbtn");
    currentTodoId = currentId;
     }
@@ -120,6 +122,7 @@ var currentTodoId;
       }
         pop.style.display = "none";
         container.classList.remove("blur");
+        document.getElementById("maincontainer2").classList.remove("blur")
     
     }
 function closesubtodo(){
@@ -134,4 +137,38 @@ function marklist(markedId) {
   prevelement.classList.add("markheading")
   document.getElementById(markid).style.display = "none";
   
+}
+function opentodo(currenthead){
+  
+  document.getElementById("maincontainer2").style.display = "block";
+  document.getElementById("container1").style.display = "none";
+  var currentheadId = currenthead.parentNode.getAttribute("id");
+  console.log(currentheadId);
+  var childnode = document.getElementById("div-add")
+  bool = true;
+ $(".todo-list-container").removeClass("todomobile");
+ 
+  var n = childnode.children.length;
+  for(let i=0;i<n;i++){
+    if((childnode.children[i].children[0].getAttribute("id")) != currentheadId){
+      document.getElementById(childnode.children[i].children[0].getAttribute("id")).style.display="none";
+      
+    }
+  }
+//    for(let i=0;i<childnode.length;i++){
+//      if(childnode.)
+//    }
+}
+function backbtn(){
+   
+  document.getElementById("maincontainer2").style.display = "none";
+  document.getElementById("container1").style.display = "block";
+  childnode = document.getElementById("div-add")
+  $(".todo-list-container").addClass("todomobile");
+  n = childnode.children.length;
+  console.log(n)
+  for(let i=0;i<n;i++){
+   
+      document.getElementById(childnode.children[i].children[0].getAttribute("id")).style.display="block";
+ }
 }

@@ -38,6 +38,13 @@ body{
     font-weight: lighter;
     margin-left:500px;
 }
+.add-list-icon-2{
+    display: inline-block;
+    color:#4b8ce8;
+    font-weight: lighter;
+    margin-left:800px;
+ 
+}
 .add-list-text{
     display: inline-block;
     font-size: 30px;
@@ -133,6 +140,7 @@ body{
     border-radius: 10px;
     background-color: white;
     margin: 15px 30px;
+    overflow: hidden;
     
 }
 .item-container{
@@ -189,7 +197,7 @@ body{
     height: 214px;
     border: 1px solid #e74c3c;
     border-radius: 10px;
- 
+    z-index: 1;
     filter: blur(0px);
     background-color: white;
     position: absolute;
@@ -199,6 +207,7 @@ body{
 .pop{
     display: none;
    animation: pop-animate 0.5s linear 0s 1 ;
+   z-index: 1;
 }
 @keyframes pop-animate{
     10%{
@@ -276,4 +285,181 @@ body{
     font-size: 20px;
     margin-top: 19px;
     outline: none;
+}
+.main-container-2{
+    margin-left: 10%;
+    margin-top: 5%;
+    width: 745px;
+   display: none;
+   z-index: -1;
+}
+
+.main-heading{
+    display: inline-block;
+    margin: 2px 10px;
+    font-family: 'Encode Sans SC',sans-serif;
+    font-size: 52px;
+    color: white;
+    text-align: center;
+    margin-left: 300px;
+}
+.back{
+    margin-left: 9px;
+    margin-top: 0px;
+    display: inline-block;
+}
+.fa-arrow-circle-left{
+    color: white;
+   font-size: 32px;
+   
+}
+.back-text{
+    font-size: 32px;
+    display: inline-block;
+    color: white;
+}
+#innercontainer2{
+    margin-left: 35%;
+}
+@media only screen and (max-width: 600px){
+    .add-list-text{
+        display: none;
+    }
+    .heading{
+        font-size: 42px;
+    }
+    
+    .heading1{
+        
+        font-weight: 600;
+        font-size: 42px;
+        
+    }
+    .container{
+        margin-left: 20px;
+        margin-top: 50px;
+     }
+     .add-list-icon{
+      
+        margin-left:50px;
+    }
+    .no-item{
+        
+        margin-left: 20px;
+        font-weight: lighter;
+        font-size: 32px;
+        margin-top: 25px;
+    }
+    .add-new-list-container{
+        width: 300px;
+        height: 200px;
+       left: 21px;
+        
+    }
+    .heading-new-container{
+        color: #e74c3c;
+        text-align: center;
+        margin-top: 40px;
+        font-size: 22px;
+        font-size: 400;
+    }
+    .input-box{
+       width: 220px;
+        height: 32px;
+        margin-left: 32px;
+    }
+    .Add-btn{
+        width: 69px;
+        height: 30px;
+        margin-left: 54px;
+        font-size: 18px;
+      
+    }
+    .close-btn{
+        Width: 69px;
+        height: 30px;
+        margin-left: 14px;
+        font-size: 18px;
+    }
+    .todo-list-container{
+        width: 250px;
+        margin: 15px -110px;
+        overflow: hidden;
+        
+    }
+    .todomobile{
+        height: 60px;
+    }
+    
+    .item-container{
+       
+        display: flex;
+      flex-direction: column;
+    }
+    .back-text{
+       font-size: 22px;
+    }
+    .fa-arrow-circle-left{
+        font-size: 22px
+    }
+    .main-heading{
+        font-size: 32px;
+        margin-left: 20px;
+    }
+    .add-new-sublist-container{
+        width: 300px;
+        margin: 15px -110px;
+        left: 130px;
+    }
+    .subheading-new-container{
+    
+        color: #e74c3c;
+        text-align: center;
+        margin-top: 40px;
+        font-size: 22px;
+        font-size: 400;
+        
+    }
+    .subtodobox-box{
+        width: 220px;
+        height: 32px;
+        margin-left: 32px;
+    }
+    .subtodo-heading{
+        color : black;
+        display: inline-block;
+        font-size: 24px;
+        text-align: center;
+        padding: 0px;
+        margin-left: 60px;
+        margin-top: 2px;
+    }
+    .subtodoAdd-btn{
+        display: inline-block;
+    width: 84px;
+    height: 36px;
+    background-color: #e74c3c;
+    border: none;
+    color: white;
+    border-radius: 18px;
+    margin-left: 39px;
+    font-size: 19px;
+    margin-top: 19px;
+    
+       
+    }
+    .subtodoclose-btn{
+        display: inline-block;
+    width: 84px;
+    height: 36px;
+    background-color: #e74c3c;
+    border: none;
+    color: white;
+    border-radius: 18px;
+    margin-left: 10px;
+    font-size: 19px;
+    margin-top: 19px;
+    outline: none
+    }
+    
 }
